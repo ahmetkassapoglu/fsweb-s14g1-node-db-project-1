@@ -106,7 +106,6 @@ db('foo-table').where('id', id).delete() // silme işleminden etkilenen **kayıt
 - Beklendiği gibi çalıştıklarını kontrol etmek için uç noktalarınızı "Insomnia" veya "Postman" gibi bir REST istemcisiyle manuel olarak test edin.
 - `npm test`ini çalıştırarak uç noktalarınızı otomatik olarak test edin.
 
-
 #### Önemli notlar
 
 - Ek dosyalar oluşturabilirsiniz ancak **mevcut dosyaları veya klasörleri taşımayın veya yeniden adlandırmayın**.
@@ -119,19 +118,19 @@ db('foo-table').where('id', id).delete() // silme işleminden etkilenen **kayıt
 ### Görev 3: Zorlayıcı Görevler
 
 Aşağıdaki alıştırmalar **araştırma gerektirir**, bunları tamamlamak için gereken kavramlar henüz derslerde işlenmedi.
-
 - Daha fazla sorgu çalıştırın.
 
   - Müşteriler tablosunda kaç farklı şehrin saklandığını keşfetmek için bir sorgu bulun. Tekrarlar çift sayılmamalıdır. 69 olmalı
   - 20 karakterden uzun adları olan tüm tedarikçileri bulun. 11 kayıt döndürür.
   - `GET /api/accounts` uç noktasına bir `query string` seçeneği ekleyin. `query string`, `limit`, `sortby` ve `sortdir` anahtarlarını içerebilir. Bu anahtarlar sağlanmışsa, veritabanından seçilen "hesapları" sınırlamak ve sıralamak için bu değerleri kullanın. Sıralama ve sınırlama için [knexjs.org](http://knexjs.org/) içindeki belgelere başvurun.
-
-
   ```js
+
   // örnek req.query nesnesi
+  
+```  
   {
     limit: 5,
     sortby: 'id',
     sortdir: 'desc'
   }
-  ```
+```
